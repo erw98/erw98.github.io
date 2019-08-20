@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
 @import url("fontawesome-all.min.css");
 
-/*
-	Parallelism by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -263,6 +257,41 @@ input, select, textarea {
 
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
+		}
+
+/* Navbar */
+
+	nav {
+		position: absolute;
+		top: 0px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 4vh;
+		width: 100%;
+		background-color: rgba(0,0,0,0.65);
+	}
+
+	.logo{
+		color: rgb(226,226,226);
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 22px;
+	}
+
+	.nav-links{
+		display: flex;
+		justify-content: space-around;
+		width: 30%;
+	}
+
+		.nav-links a{
+			color: rgb(226,226,226);
+			text-decoration: none;
+			letter-spacing: 3px;
+			font-weight: bold;
+			font-size: 14px;
 		}
 
 /* Wrapper */
