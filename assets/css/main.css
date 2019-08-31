@@ -263,12 +263,13 @@ input, select, textarea {
 
 	nav {
 		position: absolute;
+		z-index: 1000;
 		top: 0px;
 		box-sizing: border-box;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		min-height: 4vh;
+		height: 4vh;
 		width: 100%;
 		background-color: rgba(0,0,0,0.65);
 	}
@@ -283,7 +284,7 @@ input, select, textarea {
 	.nav-links{
 		display: flex;
 		justify-content: space-around;
-		width: 30%;
+		width: 35%;
 	}
 
 		.nav-links a{
@@ -293,6 +294,64 @@ input, select, textarea {
 			font-weight: bold;
 			font-size: 14px;
 		}
+
+	.sandwich{
+		position: relative;
+		display: none;
+		z-index: 1001;
+		top: 25px;
+		left: 22%;
+	}
+	
+	.sandwich div{
+		width: 21px;
+		height: 2px;
+		background-color: rgb(226,226,226);
+		margin: 5px;
+	}
+
+	@media screen and (max-width: 1200px) {
+		.nav-links{
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		body{
+			overflow-x: hidden;
+		}
+
+		nav{
+			height: 0;
+		}
+
+		nav .logo{
+			display: none;
+		}
+		
+		.nav-links{
+			position: absolute;
+			z-index: 1000;
+			right: 0px;
+			height: 500px;
+			top: 0px;
+			background-color: rgba(18, 21, 29, 0.85);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 30%;
+			transform: translateX(100%);
+			transition: transform 0.5s ease-in;
+		}
+		
+		.sandwich{
+			display: block;
+		}
+	}
+
+	.nav-active{
+		transform: translateX(0%);
+	}
 
 /* Wrapper */
 
@@ -350,7 +409,7 @@ input, select, textarea {
 		cursor: -webkit-grab;
 		cursor: -ms-grab;
 		cursor: grab;
-		z-index: 10001;
+		z-index: 101;
 	}
 
 		.scrollZone.left {
@@ -656,7 +715,7 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		position: relative;
-		z-index: 10002;
+		z-index: 102;
 	}
 
 		#footer > section:first-child {
