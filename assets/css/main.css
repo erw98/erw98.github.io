@@ -224,43 +224,6 @@ input, select, textarea {
 
 		}
 
-/* Icons */
-
-	.icon {
-		text-decoration: none;
-		position: relative;
-		text-decoration: none;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
-
-		.icon:before {
-			line-height: inherit;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-		.icon.solid:before {
-			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
-
 /* Navbar */
 
 	nav {
@@ -298,11 +261,11 @@ input, select, textarea {
 		}
 
 	.sandwich{
-		position: relative;
+		position: absolute;
 		display: none;
 		z-index: 1001;
-		top: 25px;
-		left: 22%;
+		top: 10px;
+		right: 10px;
 	}
 	
 	.sandwich div{
@@ -631,6 +594,7 @@ input, select, textarea {
 				width: 100%;
 				overflow-x: hidden;
 				overflow-y: auto;
+				margin-top: 0;
 				padding: 2.5px;
 			}
 
