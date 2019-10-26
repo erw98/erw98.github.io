@@ -10,7 +10,7 @@
 				keyboardShortcuts: {
 
 					// If true, enables scrolling via keyboard shortcuts.
-						enabled: true,
+						enabled: false,
 
 					// Sets the distance to scroll when using the left/right arrow keys.
 						distance: 50
