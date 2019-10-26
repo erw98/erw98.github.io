@@ -479,6 +479,30 @@ input, select, textarea {
 			box-shadow: 0 0 0 1px #000000;
 		}
 
+			#main .item.span-1 {
+				width: 250px;
+			}
+
+			#main .item.span-2 {
+				width: 375px;
+			}
+
+			#main .item.span-3 {
+				width: 500px;
+			}
+
+			#main .item.span-4 {
+				width: 675px;
+			}
+
+			#main .item.span-5 {
+				width: 750px;
+			}
+
+			#main .item.span-6 {
+				width: 881px;
+			}
+
 			#main .item.intro {
 				background-color: #d64760;
 				background-image: url("images/overlay.png");
