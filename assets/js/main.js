@@ -10,7 +10,7 @@
 				keyboardShortcuts: {
 
 					// If true, enables scrolling via keyboard shortcuts.
-						enabled: false,
+						enabled: true,
 
 					// Sets the distance to scroll when using the left/right arrow keys.
 						distance: 50
@@ -21,7 +21,7 @@
 				scrollWheel: {
 
 					// If true, enables scrolling via the scroll wheel.
-						enabled: true,
+						enabled: false,
 
 					// Sets the scroll wheel factor. (Ideally) a value between 0 and 1 (lower = slower scroll, higher = faster scroll).
 						factor: 1
@@ -308,8 +308,8 @@
 		if (settings.scrollZones.enabled)
 			(function() {
 
-				var	$left = $('<div class="scrollZone left"></div>'),
-					$right = $('<div class="scrollZone right"></div>'),
+				var	$left = $('<div class="scrollZone left"><i class="fas fa-arrow-left"></i></div>'),
+					$right = $('<div class="scrollZone right"><i class="fas fa-arrow-right"></i></div>'),
 					$zones = $left.add($right),
 					paused = false,
 					intervalId = null,

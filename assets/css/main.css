@@ -375,13 +375,21 @@ input, select, textarea {
 		cursor: -ms-grab;
 		cursor: grab;
 		z-index: 101;
+		display: flex;
+		font-size: 7em;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
 	}
 
 		.scrollZone.left {
+			
+			background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
 			left: 0;
 		}
 
 		.scrollZone.right {
+			background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
 			right: 0;
 		}
 
