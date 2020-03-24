@@ -308,8 +308,8 @@
 		if (settings.scrollZones.enabled)
 			(function() {
 
-				var	$left = $('<div class="scrollZone left"><i class="fas fa-arrow-left"></i></div>'),
-					$right = $('<div class="scrollZone right"><i class="fas fa-arrow-right"></i></div>'),
+				var	$left = $('<div class="scrollZone left"><i class="fas fa-arrow-circle-left"></i></div>'),
+					$right = $('<div class="scrollZone right"><i class="fas fa-arrow-circle-right"></i></div>'),
 					$zones = $left.add($right),
 					paused = false,
 					intervalId = null,
@@ -336,7 +336,6 @@
 							intervalId = setInterval(function() {
 								$main.scrollLeft($main.scrollLeft() + (settings.scrollZones.speed * direction));
 							}, 25);
-
 					},
 					deactivate = function() {
 
@@ -345,6 +344,15 @@
 
 						// Clear interval.
 							clearInterval(intervalId);
+
+						// ScrollZone Visibility
+							if($main.scrollLeft() <= 0){
+								$left.css('visibility', 'hidden');
+							}
+
+							//if($main.scrollLeft() >= $main.width){
+							//	$right.css('visibility', 'hidden');
+							//}
 
 					};
 
@@ -357,12 +365,20 @@
 				$left
 					.css('left', '0')
 					.on('mouseenter', function(event) {
+
+					// ScrollZone Visibility
+						$right.css('visibility', 'visible');
+
 						activate(-1);
 					});
 
 				$right
 					.css('right', '0')
 					.on('mouseenter', function(event) {
+
+					// ScrollZone Visibility
+						$left.css('visibility', 'visible');
+
 						activate(1);
 					});
 
