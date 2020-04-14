@@ -4,6 +4,7 @@
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
 		$main = $('#main'),
+		
 		settings = {
 
 			// Keyboard shortcuts.
@@ -308,6 +309,17 @@
 		if (settings.scrollZones.enabled)
 			(function() {
 
+				// Scrollzone Visibility
+				var firstLineItems = $('.first-line'),
+				length = firstLineItems.length,
+				pageWidth = 0;
+				while(length--){
+					pageWidth += firstLineItems[length].offsetWidth;
+				}
+				if(pageWidth - window.innerWidth <= 0){
+					$right.css('visibility', 'hidden');
+				}
+
 				var	$left = $('<div class="scrollZone left"><i class="fas fa-arrow-circle-left"></i></div>'),
 					$right = $('<div class="scrollZone right"><i class="fas fa-arrow-circle-right"></i></div>'),
 					$zones = $left.add($right),
@@ -346,9 +358,9 @@
 							clearInterval(intervalId);
 
 						// ScrollZone Visibility
-							var firstLineItems = document.getElementsByClassName('first-line'),
-							length = firstLineItems.length;
-							var pageWidth = 0;
+							var firstLineItems = $('.first-line'),
+							length = firstLineItems.length,
+							pageWidth = 0;
 							
 							while(length--){
 								pageWidth += firstLineItems[length].offsetWidth;
@@ -358,7 +370,7 @@
 								$left.css('visibility', 'hidden');
 							}
 
-							if($main.scrollLeft() >= pageWidth-window.innerWidth){
+							if($main.scrollLeft() >= pageWidth - window.innerWidth){
 								$right.css('visibility', 'hidden');
 							}
 					};
