@@ -385,12 +385,12 @@ input, select, textarea {
 		.scrollZone.left {
 			
 			visibility: hidden;
-			background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
+			background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.3));
 			left: 0;
 		}
 
 		.scrollZone.right {
-			background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
+			background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.3));
 			right: 0;
 		}
 

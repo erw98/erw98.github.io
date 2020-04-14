@@ -346,14 +346,21 @@
 							clearInterval(intervalId);
 
 						// ScrollZone Visibility
+							var firstLineItems = document.getElementsByClassName('first-line'),
+							length = firstLineItems.length;
+							var pageWidth = 0;
+							
+							while(length--){
+								pageWidth += firstLineItems[length].offsetWidth;
+							}
+
 							if($main.scrollLeft() <= 0){
 								$left.css('visibility', 'hidden');
 							}
 
-							//if($main.scrollLeft() >= $main.width){
-							//	$right.css('visibility', 'hidden');
-							//}
-
+							if($main.scrollLeft() >= pageWidth-window.innerWidth){
+								$right.css('visibility', 'hidden');
+							}
 					};
 
 				$zones
