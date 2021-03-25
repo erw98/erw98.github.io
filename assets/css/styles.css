@@ -8,8 +8,8 @@
 */
 body {
   font-family: 'Lato', arial, sans-serif;
-  color: #434343;
-  background: #DAE3E7;
+  color: #bbb;
+  background: #000;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -124,8 +124,8 @@ a.dotted-link:hover {
 /* ======= Header ======= */
 .header {
   padding: 30px 0;
-  background: #f5f5f5;
-  border-top: 10px solid #778492;
+  background: #2b2b2b;
+  border-top: 10px solid #000;
 }
 
 .header .btn {
@@ -190,7 +190,7 @@ a.dotted-link:hover {
 }
 
 .section .section-inner {
-  background: #fff;
+  background: #2b2b2b;
   padding: 30px;
 }
 
@@ -228,10 +228,6 @@ a.dotted-link:hover {
   color: #778492;
 }
 
-.latest .item .title a:hover {
-  color: #5f6b77;
-}
-
 .latest .item .project-image:hover {
   -webkit-opacity: 0.8;
   -moz-opacity: 0.8;
@@ -267,7 +263,6 @@ a.dotted-link:hover {
 
 .latest .has-ribbon {
   position: relative;
-  display: inline-block;
 }
 
 .latest .has-ribbon .text {
@@ -332,14 +327,6 @@ a.dotted-link:hover {
   line-height: 1.5;
 }
 
-.projects .item .title a {
-  color: #778492;
-}
-
-.projects .item .title a:hover {
-  color: #5f6b77;
-}
-
 /* Work Section */
 .experience .item {
   margin-bottom: 30px;
@@ -353,20 +340,6 @@ a.dotted-link:hover {
 }
 
 .experience .item .title .place {
-  color: #999;
-  font-weight: normal;
-}
-
-.experience .item .title .place a {
-  color: #999;
-}
-
-.experience .item .title .place a:hover {
-  color: #666666;
-}
-
-.experience .item .title .year {
-  color: #999;
   font-weight: normal;
 }
 
@@ -523,7 +496,8 @@ a.dotted-link:hover {
   padding-left: 25px;
 }
 
-.education .item .university .year {
+.year {
+  font-size: 12px;
   color: #b0b7bf;
   font-weight: 500;
 }
@@ -563,9 +537,6 @@ a.dotted-link:hover {
   color: #778492;
 }
 
-.blog .item .title a:hover {
-  color: #5f6b77;
-}
 
 .blog .item p {
   margin-bottom: 5px;
@@ -582,14 +553,6 @@ a.dotted-link:hover {
 
 .list ul li .svg-inline--fa {
   margin-right: 5px;
-}
-
-.list ul li a {
-  color: #778492;
-}
-
-.list ul li a:hover {
-  color: #49515a;
 }
 
 /* Credits */
@@ -622,6 +585,18 @@ a.dotted-link:hover {
 .aside .subheading {
   font-size: 18px;
   color: #545e69;
+}
+
+/*Youtube Embed*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+}
+.video-container iframe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* ======= Footer ======= */
